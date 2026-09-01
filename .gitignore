@@ -1,0 +1,15 @@
+# Python-generated files
+__pycache__/
+*.py[c]
+
+# Virtual environments
+.venv/
+
+# Environment variables
+.env
+
+# Generated candidate data
+candidate.json
+
+# Personal resume
+Resume_Shruti Shakya.pdf
