@@ -14,24 +14,28 @@ Portfolio-AI is an AI-powered portfolio assistant that represents a job candidat
 
 ## Current Architecture
 
+
+```text
 Resume PDF
-    ↓
+    │
+    ▼
 PDF Text Extraction
-    ↓
-Groq LLM
-    ↓
-Structured Resume Data
-    ↓
+    │
+    ▼
+Groq LLM Resume Parsing
+    │
+    ▼
+JSON Response
+    │
+    ▼
 Pydantic Validation
-    ↓
-candidate.json
-    ↓
-FastAPI
-    ↓
-┌─────────────────────┐
-│                     │
-↓                     ↓
-/chat             /chat/stream
-│                     │
-↓                     ↓
-AI Response       Streaming Response
+    │
+    ▼
+Candidate JSON
+    │
+    ▼
+FastAPI Backend
+    │
+    ├── /chat ──────────► AI Response
+    │
+    └── /chat/stream ──► Streaming AI Response
